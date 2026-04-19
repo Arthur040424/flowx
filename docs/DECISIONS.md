@@ -44,6 +44,6 @@ WebSockets were chosen because FlowX requires bidirectional communication - not 
 
 ## 005 - Why JSONB for step configuration
 
-**Decision:** Store step configuration as JSONB rather than individual columns.
+**Decision:** Store step configuration as JSONB rather than individual columns.x
 
 **Reasoning:** Different step types (HTTP, SQL, transform) require completely different configuration fields. Creating individual columns for every possible configuration would result in a sparse table with mostly null values. JSONB allows each step type to store exactly the fields it needs, while still being queryable by PostgreSQL when needed.
